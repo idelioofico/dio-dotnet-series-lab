@@ -1,0 +1,16 @@
+C:\workspace\mrv_dio\Dio.Series\obj\Debug\net5.0\Dio.Series.csprojAssemblyReference.cache
+C:\workspace\mrv_dio\Dio.Series\obj\Debug\net5.0\Dio.Series.GeneratedMSBuildEditorConfig.editorconfig
+C:\workspace\mrv_dio\Dio.Series\obj\Debug\net5.0\Dio.Series.AssemblyInfoInputs.cache
+C:\workspace\mrv_dio\Dio.Series\obj\Debug\net5.0\Dio.Series.AssemblyInfo.cs
+C:\workspace\mrv_dio\Dio.Series\obj\Debug\net5.0\Dio.Series.csproj.CoreCompileInputs.cache
+C:\workspace\mrv_dio\Dio.Series\bin\Debug\net5.0\Dio.Series.exe
+C:\workspace\mrv_dio\Dio.Series\bin\Debug\net5.0\Dio.Series.deps.json
+C:\workspace\mrv_dio\Dio.Series\bin\Debug\net5.0\Dio.Series.runtimeconfig.json
+C:\workspace\mrv_dio\Dio.Series\bin\Debug\net5.0\Dio.Series.runtimeconfig.dev.json
+C:\workspace\mrv_dio\Dio.Series\bin\Debug\net5.0\Dio.Series.dll
+C:\workspace\mrv_dio\Dio.Series\bin\Debug\net5.0\ref\Dio.Series.dll
+C:\workspace\mrv_dio\Dio.Series\bin\Debug\net5.0\Dio.Series.pdb
+C:\workspace\mrv_dio\Dio.Series\obj\Debug\net5.0\Dio.Series.dll
+C:\workspace\mrv_dio\Dio.Series\obj\Debug\net5.0\ref\Dio.Series.dll
+C:\workspace\mrv_dio\Dio.Series\obj\Debug\net5.0\Dio.Series.pdb
+C:\workspace\mrv_dio\Dio.Series\obj\Debug\net5.0\Dio.Series.genruntimeconfig.cache
