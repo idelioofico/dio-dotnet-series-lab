@@ -29,19 +29,27 @@ namespace Dio.Series
             retorno += "Titulo: " + this.Titulo + Environment.NewLine;
             retorno += "Gênero: " + this.Genero + Environment.NewLine;
             retorno += "Descrição" + this.Descricao + Environment.NewLine;
-            retorno += "Ano de lançamento: " + this.Ano+Environment.NewLine;
+            retorno += "Ano de lançamento: " + this.Ano + Environment.NewLine;
             retorno += "Excluido:" + this.Excluido;
 
             return retorno;
         }
-        public string retornaTitulo() {
+        public string retornaTitulo()
+        {
             return this.Titulo;
         }
-        public int retornaId() {
+        public int retornaId()
+        {
             return this.ID;
         }
 
-        public void Exclui() {
+        public bool retornaExcluido()
+        {
+            return this.Excluido;
+        }
+
+        public void Exclui()
+        {
             this.Excluido = true;
         }
     }

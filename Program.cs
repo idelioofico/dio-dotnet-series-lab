@@ -63,6 +63,7 @@ namespace Dio.Series
             Console.WriteLine();
             var lista = repositorio.Lista();
 
+
             if (lista.Count == 0)
             {
                 Console.Write("Nenhuma serie foi cadastrada ainda");
@@ -71,7 +72,10 @@ namespace Dio.Series
             {
                 Console.WriteLine("---------------------------------");
                 foreach (var item in lista)
-                    Console.WriteLine($"{item.ID}. {item.Titulo}");
+                {
+                    var excluido = item.retornaExcluido();
+                    Console.WriteLine("{0}. {1} {2}",item.ID,item.Titulo,excluido?"*Excluido*":"");
+                }
                 Console.WriteLine("---------------------------------");
             }
         }
@@ -104,23 +108,23 @@ namespace Dio.Series
             Console.Write("Indique o codigo do registo que pretende actualizar: ");
             int.TryParse(Console.ReadLine(), out int id);
 
-            var data = repositorio.RetornaPorId(id);
+            var dados = repositorio.RetornaPorId(id);
 
 
             foreach (var item in Enum.GetValues(typeof(Genero)))
                 Console.WriteLine($"{item}. {Enum.GetName(typeof(Genero), item)}");
 
-            int.TryParse(colectaDados("Dentre as opções acima, selecione o gênero: ", data.Genero.ToString()), out int genero);
+            int.TryParse(colectaDados("Dentre as opções acima, selecione o gênero: ", dados.Genero.ToString()), out int genero);
 
-            string titulo = colectaDados("Introduza o título: ", data.Titulo);
+            string titulo = colectaDados("Introduza o título: ", dados.Titulo);
 
-            int.TryParse(colectaDados("Introduza o ano de lançamento: ", data.Ano.ToString()), out int ano);
+            int.TryParse(colectaDados("Introduza o ano de lançamento: ", dados.Ano.ToString()), out int ano);
 
-            string descricao = colectaDados("Introduza a descrição: ", data.Descricao);
+            string descricao = colectaDados("Introduza a descrição: ", dados.Descricao);
 
-            var serie = new Serie(data.ID, (Genero)genero, descricao, titulo, ano);
+            var serie = new Serie(dados.ID, (Genero)genero, descricao, titulo, ano);
 
-            repositorio.Actualiza(data.ID, serie);
+            repositorio.Actualiza(dados.ID, serie);
 
         }
         //Coleta, verifica(vazios para insert ou update) dados de entrada
@@ -169,10 +173,10 @@ namespace Dio.Series
             Console.WriteLine();
 
             int.TryParse(colectaDados("Introduza o codigo da serie que deseja visualizar: "), out int id);
-            var data = repositorio.RetornaPorId(id);
-            if (!data.Equals(null))
+            var dados = repositorio.RetornaPorId(id);
+            if (!dados.Equals(null))
             {
-                Console.WriteLine(data.ToString());
+                Console.WriteLine(dados.ToString());
             }
         }
 
